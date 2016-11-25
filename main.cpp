@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char const *argv[]) {
 
     vector<Player*> jugadores;
-
+    // vector<Coach*> entrenadores;
 
     Player* asd = new Player();
 
@@ -55,6 +55,29 @@ int main(int argc, char const *argv[]) {
         }
 
         if (opcion == 2) {
+            /*
+            string nombre1;
+            string apellido1;
+            string apodo1;
+            int nivel1;
+            string tactica;
+
+            std::cout << "¡BIENVENIDO AL CREADOR DE ENTRENADORES!" << std::endl;
+            std::cout << "Ingrese el nombre de su entrenador: " << std::endl;
+            cin>> nombre1;
+            std::cout << "Ingrese el apellido de su entrenador: " << std::endl;
+            cin>> apellido1;
+            std::cout << "Ingrese el apodo de su entrenador: " << std::endl;
+            cin>> apodo1;
+            std::cout << "Ingrese el nivel de su entrenador:  " <<" valores [1-10] "  <<std::endl;
+            cin>> nivel1;
+            std::cout << "Ingrese la táctica de su entrenador : " << std::endl;
+            cin>> tactica;
+
+            Coach* nuevo = new Coach(nombre1,apellido1,apodo1,nivel1,tactica);
+
+            entrenadores.push_back(nuevo);
+            */
 
         }
 
