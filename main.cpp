@@ -15,8 +15,20 @@ int main(int argc, char const *argv[]) {
     vector<Team*> equipos;
     vector<Game*> juegos;
 
+    for (size_t i = 0; i < 11; i++) {
+        Player* asd = new Player();
 
-    Player* asd = new Player();
+        asd->setName("Casco");
+
+        jugadores.push_back(asd);
+    }
+
+    Coach* p = new Coach();
+    p->setName("Mayra");
+
+    entrenadores.push_back(p);
+
+    //Player* asd = new Player();
 
     int opcion = 0 ;
     std::cout << "NOTA: Se generará el resumen a la hora de salir del programa :P " << std::endl;
@@ -96,7 +108,8 @@ int main(int argc, char const *argv[]) {
 
         if (opcion == 4) {
             if(jugadores.size()> 10 && entrenadores.size() > 0 ){
-
+                int select;
+                int seleccionado;
                 std::cout << "Hora de asignar jugadores a un equipo" << std::endl;
 
                 cout << "Seleccione equipo a asignar: " << endl;
@@ -105,8 +118,19 @@ int main(int argc, char const *argv[]) {
                     Team * temp = equipos.at(i);
                     cout << i <<" >>> "<< temp->getT_Name() << endl;
                 }
+                cin>> select;
 
+                std::cout << "Seleccione a su entrenador: " << std::endl;
+                for (int i = 0; i < entrenadores.size(); i++) {
+                    Coach * temp = entrenadores.at(i);
+                    cout << i <<" >>> "<< temp->getName() << endl;
+                }
 
+                cin>> seleccionado;
+
+                Coach* auxiliar = entrenadores.at(seleccionado);
+
+                entrenadores.erase(entrenadores.begin() + seleccionado);
 
 
                 int contador = 11;
@@ -118,10 +142,13 @@ int main(int argc, char const *argv[]) {
                             Player * temp = jugadores.at(i);
                             cout << i <<" >>> "<< temp->getName() << endl;
                         }
-
+                        std::cout << "Seleccione una opción" << std::endl;
+                        cin>> seleccion;
+                        Player* aux = jugadores.at(seleccion);
+                        equipos.at(select)->addPlayer(aux);
+                        jugadores.erase(jugadores.begin() + seleccion);
                         contador--;
                     }
-
 
             }else{
                 cout << "Aun no se cumplen las condiciones para esta opción" << endl;
