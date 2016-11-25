@@ -23,6 +23,7 @@ int main(int argc, char const *argv[]) {
         std::cin >> opcion;
 
         if (opcion == 1) {
+
             string nombre;
             string apellido;
             string apodo;
@@ -43,7 +44,6 @@ int main(int argc, char const *argv[]) {
             Player* nuevo = new Player(nombre,apellido,apodo,nivel,posicion);
 
             jugadores.push_back(nuevo);
-
 
             /*
             string name;
