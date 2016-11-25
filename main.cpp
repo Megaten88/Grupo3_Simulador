@@ -20,7 +20,7 @@ int main(int argc, char const *argv[]) {
     while (opcion !=  8){
         std::cout << "LAB# 6 :: GRUPO 3" << std::endl;
         std::cout << "1) Agregar jugadores" << std::endl;
-        std::cout << "2) spoof            " << std::endl;
+        std::cout << "2) Agregar Coaches  " << std::endl;
         std::cout << "3) spoof            " << std::endl;
         std::cout << "4) spoof            " << std::endl;
         std::cin >> opcion;
