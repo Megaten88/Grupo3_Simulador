@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
         string apellido;
         string apodo;
         int nivel;
-
+        cout<<"Holita"<<endl;
         if (opcion == 1) {
             string posicion;
             std::cout << "¡BIENVENIDO AL CREADOR DE JUGADORES!" << std::endl;
@@ -45,14 +45,6 @@ int main(int argc, char const *argv[]) {
             Player* nuevo = new Player(nombre,apellido,apodo,nivel,posicion);
 
             jugadores.push_back(nuevo);
-
-            /*
-            string name;
-        	string surname;
-        	string nickname;
-        	int level;
-            string position
-            */
         }
 
         if (opcion == 2) {
