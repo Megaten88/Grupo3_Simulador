@@ -20,5 +20,5 @@ public:
 	void setLevel(int);
 	int getLevel();
 	~Person();
-	
+
 };
