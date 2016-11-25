@@ -3,14 +3,14 @@
 #include <string>
 using std::string;
 
-class Couch: public Person
+class Coach: public Person
 {
 private:
 	string tactic;
 public:
-	Couch();
-	Couch(string,string,string,int,string);
+	Coach();
+	Coach(string,string,string,int,string);
 	void setTactic(string);
 	string getTactic();
-	~Couch();	
+	~Coach();	
 };
