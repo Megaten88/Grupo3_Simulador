@@ -31,7 +31,8 @@ public:
 	void setGoal_if(int);
 	int getGoal_a();
 	void setGoal_a(int);
-	Team(string, Coach* ,std::vector<Player*>, int, double, int, int);
+	void addPlayer(Player*);
+	Team(string, Coach* , int, double, int, int);
 	~Team();
 	
 };

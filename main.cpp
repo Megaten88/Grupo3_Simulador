@@ -1,5 +1,7 @@
 #include "Person.h"
 #include "Player.h"
+#include "Team.h"
+#include "Game.h"
 #include <vector>
 #include <string>
 #include <iostream>

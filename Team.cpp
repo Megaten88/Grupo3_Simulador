@@ -5,10 +5,9 @@ Team::Team(){
 
 }
 
-Team::Team(string t_name, Coach* t_coach,std::vector<Player*> P_list,int def_lvl,double atk_lvl,int goals_if,int goals_a){
+Team::Team(string t_name, Coach* t_coach,int def_lvl,double atk_lvl,int goals_if,int goals_a){
 	this-> t_name = t_name;
 	this-> t_coach = t_coach;
-	this->P_list = P_list;
 	this-> def_lvl = def_lvl;
 	this-> atk_lvl = atk_lvl;
 	this-> goals_if = goals_if;
@@ -63,4 +62,8 @@ void Team::setGoal_a(int goals_a){
 
 void Team::setGoal_if(int goals_if){
 	this->goals_if=goals_if;
+}
+
+void Team::addPlayer(Player* jugador){
+	P_list.push_back(jugador);
 }
