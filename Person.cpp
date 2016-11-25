@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Person.h"
 using std::string;
 using std::cout;
 using std::endl;
@@ -32,7 +33,7 @@ string Person::getNickname(){
 	return nickname;
 }
 void Person::setLevel(int nivel){
-	if (nivel >= 1 && nivel < =10)
+	if (nivel >= 1 && nivel <=10)
 	{
 		level = nivel;
 	}else{
