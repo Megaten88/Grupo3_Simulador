@@ -24,6 +24,6 @@ string Player::getPosition(){
 
 string Player::toString(){
 	stringstream ss;
-	ss<<"Nombre: " << name <<"; Apellido: "<< surname <<"; Sobrenombre: "<< nickname <<"; Nivel: "<< level <<"; Posición: "<< position <<";"<<endl;
+	ss<<"Nombre: " << name <<"; Apellido: "<< surname <<"; Sobrenombre: "<< nickname <<"; Nivel: "<< level <<"; Posición: "<< position <<";";
 	return ss.str();
 }

@@ -21,7 +21,7 @@ Coach::~Coach(){
 }
 string Coach::toString(){
 	stringstream ss;
-	ss<<"Nombre: " << name <<"; Apellido: "<< surname <<"; Sobrenombre: "<< nickname <<"; Nivel: "<< level <<"; Táctica: "<< tactic <<";"<<endl;
+	ss<<"Nombre: " << name <<"; Apellido: "<< surname <<"; Sobrenombre: "<< nickname <<"; Nivel: "<< level <<"; Táctica: "<< tactic <<";";
 	return ss.str();
 
 }
