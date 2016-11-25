@@ -5,7 +5,7 @@
 
 using std::string;
 
-class Player: Person{
+class Player: public Person{
 
 private:
         string position;

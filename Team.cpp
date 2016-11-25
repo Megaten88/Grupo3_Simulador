@@ -1,5 +1,5 @@
 #include "Team.h"
-
+#include <typeinfo>
 
 Team::Team(){
 
@@ -30,11 +30,19 @@ void Team::setT_coach(Coach* t_coach){
 	this->t_coach=t_coach;
 }
 
-int Team::getDef_lvl(){
+double Team::getDef_lvl(){
 	return def_lvl;
 }
 
-void Team::setDef_lvl(int def_lvl){
+void Team::setDef_lvl(){
+	int def_lvl = 0;
+	for (int i = 0; i < P_list.size(); ++i)
+	{
+		Player* p = P_list.at(i);
+		def_lvl =+ p->getLevel();
+	}
+	def_lvl += t_coach->getLevel();
+
 	this->def_lvl=def_lvl;
 }
 
@@ -42,7 +50,13 @@ double Team::getAtk_lvl(){
 	return atk_lvl;
 }
 
-void Team::setAtk_lvl(double atk_lvl){
+void Team::setAtk_lvl(){
+	for (int i = 0; i < P_list.size(); ++i)
+	{	
+		Player* p = P_list.at(i);
+		atk_lvl =+ p -> getLevel();
+	}
+	atk_lvl = atk_lvl * 1.1;
 	this->atk_lvl=atk_lvl;
 }
 
