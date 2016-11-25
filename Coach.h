@@ -1,7 +1,6 @@
 #pragma once
 #include "Person.h"
 #include <string>
-#include <sstream>
 using std::string;
 
 class Coach: public Person

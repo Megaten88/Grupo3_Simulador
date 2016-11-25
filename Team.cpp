@@ -86,4 +86,6 @@ Team::~Team(){
 	    P_list.erase(P_list.begin() + i);
 	}
    	P_list.clear();
+
+   	delete t_coach;
 }

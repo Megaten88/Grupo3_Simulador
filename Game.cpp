@@ -62,3 +62,15 @@ Game::Game(Team* team_1, Team* team_2, int score_1, int score_2, Team* winner,Te
 	this->local = local;
 }
 
+Game::Game(Team* team_1, Team* team_2){
+	this->team_1 = team_1;
+	this->team_2 = team_2;
+	local = this->team_1;
+}
+
+Game::~Game(){
+	delete team_1;
+	delete team_2;
+	delete winner;
+	delete local;
+}

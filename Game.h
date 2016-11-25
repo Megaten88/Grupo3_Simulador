@@ -24,6 +24,7 @@ public:
 	void setLocal(Team*);
 	Game();
 	Game(Team*, Team*, int, int, Team*,Team*);
+	Game(Team*, Team*);
 	~Game();
 	
 };

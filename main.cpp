@@ -5,8 +5,9 @@
 #include "Game.h"
 #include <vector>
 #include <string>
+#include <sstream>
 #include <iostream>
-//#include <stdlib>
+#include <stdlib.h>
 using namespace std;
 
 int main(int argc, char const *argv[]) {
@@ -15,19 +16,19 @@ int main(int argc, char const *argv[]) {
     vector<Coach*> entrenadores;
     vector<Team*> equipos;
     vector<Game*> juegos;
+    stringstream reporte;
 
-    for (size_t i = 0; i < 11; i++) {
+    for (size_t i = 0; i < 44; i++) {
         Player* asd = new Player();
 
         asd->setName("Casco");
-
+        asd->setLevel(rand() %10 +1);
         jugadores.push_back(asd);
+        Coach* p = new Coach();
+        p->setName("Mayra");
+        p -> setLevel(rand()%10 +1);
+        entrenadores.push_back(p);
     }
-
-    Coach* p = new Coach();
-    p->setName("Mayra");
-
-    entrenadores.push_back(p);
 
     //Player* asd = new Player();
     Player* asd = new Player();
@@ -156,9 +157,75 @@ int main(int argc, char const *argv[]) {
                 cout << "Aun no se cumplen las condiciones para esta opción" << endl;
             }
 
+        }
+        if(opcion == 5){
+            if (equipos.size() >= 6)
+            {   
+                int t1,t2,t3,t4;
+                cout<<"----------LISTA DE EQUIPOS DISPONIBLES ----------"<<endl;
+                for (int i = 0; i < equipos.size(); ++i)
+                {
+                    cout<<i<<") "<< equipos.at(i) -> getT_Name()<<endl;  
+                }
+                cout<<"Elija los 4 equipos separados por espacios. Ex: 1 2 3..etc. :";
+                cin>>t1;
+                cin>>t2;
+                cin>>t3;
+                cin>>t4;
+                Team* team1 = equipos.at(t1);
+                Team* team2 = equipos.at(t2);
+                Team* team3 = equipos.at(t3);
+                Team* team4 = equipos.at(t4);
+                team1 -> setDef_lvl();
+                team1 -> setAtk_lvl();
+                team2 -> setDef_lvl();
+                team2 -> setAtk_lvl();
+                team3 -> setDef_lvl();
+                team3 -> setAtk_lvl();
+                team4 -> setDef_lvl();
+                team4 -> setAtk_lvl();
+
+                juegos.push_back(new Game(team1,team2));
+                juegos.push_back(new Game(team3,team4));
+                juegos.push_back(new Game(team1,team3));
+                juegos.push_back(new Game(team2,team4));
+                juegos.push_back(new Game(team1,team4));
+                juegos.push_back(new Game(team2,team3));
+
+                for (int i = 0; i < 5; ++i)
+                {
+                    int attack = rand() % 10 + 1;
+                    int def = rand() %10 +1;
+                    if ((attack * juegos.at(0)->getTeam_1() -> getAtk_lvl()) > (def* juegos.at(0)->getTeam_2()->getDef_lvl()))
+                    {
+                        juegos.at(0)->setScore_1( juegos.at(0) -> getScore_1() + 1);   
+                    }else{
+                        juegos.at(0)->setScore_2( juegos.at(0) -> getScore_2() + 1);
+                    }
+                }
+
+            }else{
+                cout<<"No hay suficientes equipos para simular un torneo. "<<endl;
+            }
+        }
+        if(opcion == 6){
+        }
     }
-}
-
-
+    for (int i = 0; i < equipos.size(); ++i){
+        equipos.erase(equipos.begin() + i);
+    }
+    equipos.clear();
+    for (int i = 0; i <jugadores.size(); ++i){
+       jugadores.erase(jugadores.begin() + i);
+    }
+    jugadores.clear();
+    for (int i = 0; i < entrenadores.size(); ++i){
+        entrenadores.erase(entrenadores.begin() + i);
+    }
+    entrenadores.clear();
+    for (int i = 0; i < juegos.size(); ++i){
+        juegos.erase(juegos.begin() + i);
+    }
+    juegos.clear();
     return 0;
 }
