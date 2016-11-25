@@ -1,7 +1,9 @@
 #include "Coach.h"
 #include "Person.h"
+#include <sstream>
 #include <string>
 using std::string;
+using std::stringstream;
 Coach::Coach(){
 
 }
@@ -15,5 +17,11 @@ string Coach::getTactic(){
 	return tactic;
 }
 Coach::~Coach(){
+
+}
+string Coach::toString(){
+	stringstream ss;
+	ss<<"Nombre: " << name <<"; Apellido: "<< surname <<"; Sobrenombre: "<< nickname <<"; Nivel: "<< level <<"; Táctica: "<< tactic <<";"<<endl;
+	return ss.str();
 
 }
