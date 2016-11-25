@@ -10,6 +10,7 @@ protected:
 	int level;
 public:
 	Person();
+	Person(string, string, string, int);
 	void setName(string);
 	string getName();
 	void setSurname(string);
