@@ -15,5 +15,5 @@ public:
         ~Player();
         void setPosition(string);
         string getPosition();
-
+        string toString();
 };

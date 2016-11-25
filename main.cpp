@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+//#include <stdlib>
 using namespace std;
 
 int main(int argc, char const *argv[]) {
@@ -29,6 +30,7 @@ int main(int argc, char const *argv[]) {
     entrenadores.push_back(p);
 
     //Player* asd = new Player();
+    Player* asd = new Player();
 
     int opcion = 0 ;
     std::cout << "NOTA: Se generará el resumen a la hora de salir del programa :P " << std::endl;

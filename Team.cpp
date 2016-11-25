@@ -80,3 +80,10 @@ void Team::setGoal_if(int goals_if){
 void Team::addPlayer(Player* jugador){
 	P_list.push_back(jugador);
 }
+
+Team::~Team(){
+	for (int i = 0; i < P_list.size(); ++i){
+	    P_list.erase(P_list.begin() + i);
+	}
+   	P_list.clear();
+}
