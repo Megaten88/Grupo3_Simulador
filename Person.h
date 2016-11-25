@@ -3,7 +3,7 @@
 using std::string;
 class Person
 {
-private:
+protected:
 	string name;
 	string surname;
 	string nickname;
