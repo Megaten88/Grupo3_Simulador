@@ -1,6 +1,5 @@
 #include "Person.h"
 #include "Player.h"
-
 #include "Coach.h"
 #include "Team.h"
 #include "Game.h"
@@ -13,6 +12,9 @@ int main(int argc, char const *argv[]) {
 
     vector<Player*> jugadores;
     vector<Coach*> entrenadores;
+    vector<Team*> equipos;
+    vector<Game*> juegos;
+
 
     Player* asd = new Player();
 
@@ -22,8 +24,8 @@ int main(int argc, char const *argv[]) {
         std::cout << "LAB# 6 :: GRUPO 3" << std::endl;
         std::cout << "1) Agregar jugadores" << std::endl;
         std::cout << "2) Agregar Coaches  " << std::endl;
-        std::cout << "3) spoof            " << std::endl;
-        std::cout << "4) spoof            " << std::endl;
+        std::cout << "3) Agregar Equipos  " << std::endl;
+        std::cout << "4) Asignar Partidas " << std::endl;
         std::cin >> opcion;
 
         string nombre;
@@ -67,13 +69,25 @@ int main(int argc, char const *argv[]) {
             cin>> tactica;
 
             Coach* nuevo = new Coach(nombre,apellido,apodo,nivel,tactica);
-
             entrenadores.push_back(nuevo);
 
         }
 
-        if (opcion == 3) {
+        if (opcion == 3){
+            /*
+            int def_lvl;
+        	double atk_lvl;
+        	int goals_if;
+        	int goals_a;
+            */
 
+            std::cout << "¡BIENVENIDO AL CREADOR DE EQUIPOS" << std::endl;
+            std::cout << "Ingrese el nombre de su equipo: " << std::endl;
+            cin>> nombre;
+            std::cout << " PS : Recuerde agregar jugadores y un entrenador a su equipo."<< std::endl;
+
+            Team* nuevo = new Team();
+            nuevo->setName(nombre);
         }
 
         if (opcion == 4) {
