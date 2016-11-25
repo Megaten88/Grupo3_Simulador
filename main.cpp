@@ -159,7 +159,7 @@ int main(int argc, char const *argv[]) {
 
         }
         if(opcion == 5){
-            if (equipos.size() >= 6)
+            if (equipos.size() >= 4)
             {   
                 int t1,t2,t3,t4;
                 cout<<"----------LISTA DE EQUIPOS DISPONIBLES ----------"<<endl;
@@ -203,7 +203,69 @@ int main(int argc, char const *argv[]) {
                         juegos.at(0)->setScore_2( juegos.at(0) -> getScore_2() + 1);
                     }
                 }
-
+                if (juegos.at(0)->setScore_1() > juegos.at(0)->setScore_2())
+                {
+                    reporte<<
+                }
+                for (int i = 0; i < 5; ++i)
+                {
+                    int attack = rand() % 10 + 1;
+                    int def = rand() %10 +1;
+                    if ((attack * juegos.at(1)->getTeam_1() -> getAtk_lvl()) > (def* juegos.at(1)->getTeam_2()->getDef_lvl()))
+                    {
+                        juegos.at(1)->setScore_1( juegos.at(1) -> getScore_1() + 1);   
+                    }else{
+                        juegos.at(1)->setScore_2( juegos.at(1) -> getScore_2() + 1);
+                    }
+                }
+                for (int i = 0; i < 5; ++i)
+                {
+                    int attack = rand() % 10 + 1;
+                    int def = rand() %10 +1;
+                    if ((attack * juegos.at(2)->getTeam_1() -> getAtk_lvl()) > (def* juegos.at(2)->getTeam_2()->getDef_lvl()))
+                    {
+                        juegos.at(2)->setScore_1( juegos.at(2) -> getScore_1() + 1);   
+                    }else{
+                        juegos.at(2)->setScore_2( juegos.at(2) -> getScore_2() + 1);
+                    }
+                }
+                for (int i = 0; i < 5; ++i)
+                {
+                    int attack = rand() % 10 + 1;
+                    int def = rand() %10 +1;
+                    if ((attack * juegos.at(3)->getTeam_1() -> getAtk_lvl()) > (def* juegos.at(3)->getTeam_2()->getDef_lvl()))
+                    {
+                        juegos.at(3)->setScore_1( juegos.at(3) -> getScore_1() + 1);   
+                    }else{
+                        juegos.at(3)->setScore_2( juegos.at(3) -> getScore_2() + 1);
+                    }
+                }
+                for (int i = 0; i < 5; ++i)
+                {
+                    int attack = rand() % 10 + 1;
+                    int def = rand() %10 +1;
+                    if ((attack * juegos.at(4)->getTeam_1() -> getAtk_lvl()) > (def* juegos.at(4)->getTeam_2()->getDef_lvl()))
+                    {
+                        juegos.at(4)->setScore_1( juegos.at(4) -> getScore_1() + 1);   
+                    }else{
+                        juegos.at(4)->setScore_2( juegos.at(4) -> getScore_2() + 1);
+                    }
+                }
+                for (int i = 0; i < 5; ++i)
+                {
+                    int attack = rand() % 10 + 1;
+                    int def = rand() %10 +1;
+                    if ((attack * juegos.at(5)->getTeam_1() -> getAtk_lvl()) > (def* juegos.at(5)->getTeam_2()->getDef_lvl()))
+                    {
+                        juegos.at(5)->setScore_1( juegos.at(5) -> getScore_1() + 1);   
+                    }else{
+                        juegos.at(5)->setScore_2( juegos.at(5) -> getScore_2() + 1);
+                    }
+                }
+                delete team1;
+                delete team2;
+                delete team3;
+                delete team4;
             }else{
                 cout<<"No hay suficientes equipos para simular un torneo. "<<endl;
             }
