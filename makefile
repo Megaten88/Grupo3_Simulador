@@ -1,7 +1,7 @@
-main: main.o Ṕerson.o Coach.o Player.o
-	g++ main.o Ṕerson.o Coach.o Player.o -o main
+main: main.o Person.o Coach.o Player.o Team.o Game.o
+	g++ main.o Person.o Coach.o Player.o Team.o Game.o -o main
 
-main.o: Person.h Player.h Coach.h Team.h Game.h
+main.o: main.cpp Person.h Player.h Coach.h Team.h Game.h
 	g++ -c main.cpp
 
 Person.o: Person.h Person.cpp
