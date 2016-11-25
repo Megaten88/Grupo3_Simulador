@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char const *argv[]) {
 
     vector<Player*> jugadores;
-    // vector<Coach*> entrenadores;
+    vector<Coach*> entrenadores;
 
     Player* asd = new Player();
 
@@ -56,7 +56,7 @@ int main(int argc, char const *argv[]) {
         }
 
         if (opcion == 2) {
-            /*
+
             string nombre1;
             string apellido1;
             string apodo1;
@@ -78,7 +78,7 @@ int main(int argc, char const *argv[]) {
             Coach* nuevo = new Coach(nombre1,apellido1,apodo1,nivel1,tactica);
 
             entrenadores.push_back(nuevo);
-            */
+
 
         }
 
