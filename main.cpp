@@ -22,12 +22,12 @@ int main(int argc, char const *argv[]) {
         std::cout << "4) spoof            " << std::endl;
         std::cin >> opcion;
 
-        if (opcion == 1) {
+        string nombre;
+        string apellido;
+        string apodo;
+        int nivel;
 
-            string nombre;
-            string apellido;
-            string apodo;
-            int nivel;
+        if (opcion == 1) {
             string posicion;
 
             std::cout << "¡BIENVENIDO AL CREADOR DE JUGADORES!" << std::endl;
@@ -45,40 +45,26 @@ int main(int argc, char const *argv[]) {
 
             jugadores.push_back(nuevo);
 
-
-            /*
-            string name;
-        	string surname;
-        	string nickname;
-        	int level;
-            string position
-            */
         }
 
         if (opcion == 2) {
-
-            string nombre1;
-            string apellido1;
-            string apodo1;
-            int nivel1;
             string tactica;
 
             std::cout << "¡BIENVENIDO AL CREADOR DE ENTRENADORES!" << std::endl;
             std::cout << "Ingrese el nombre de su entrenador: " << std::endl;
-            cin>> nombre1;
+            cin>> nombre;
             std::cout << "Ingrese el apellido de su entrenador: " << std::endl;
-            cin>> apellido1;
+            cin>> apellido;
             std::cout << "Ingrese el apodo de su entrenador: " << std::endl;
-            cin>> apodo1;
+            cin>> apodo;
             std::cout << "Ingrese el nivel de su entrenador:  " <<" valores [1-10] "  <<std::endl;
-            cin>> nivel1;
+            cin>> nivel;
             std::cout << "Ingrese la táctica de su entrenador : " << std::endl;
             cin>> tactica;
 
-            Coach* nuevo = new Coach(nombre1,apellido1,apodo1,nivel1,tactica);
+            Coach* nuevo = new Coach(nombre,apellido,apodo,nivel,tactica);
 
             entrenadores.push_back(nuevo);
-
 
         }
 
