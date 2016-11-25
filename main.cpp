@@ -19,7 +19,7 @@ int main(int argc, char const *argv[]) {
     Player* asd = new Player();
 
     int opcion = 0 ;
-
+    std::cout << "NOTA: Se generará el resumen a la hora de salir del programa :P " << std::endl;
     while (opcion !=  8){
         std::cout << "LAB# 6 :: GRUPO 3" << std::endl;
         std::cout << "1) Agregar jugadores" << std::endl;
@@ -80,7 +80,6 @@ int main(int argc, char const *argv[]) {
         	int goals_if;
         	int goals_a;
             */
-
             std::cout << "¡BIENVENIDO AL CREADOR DE EQUIPOS" << std::endl;
             std::cout << "Ingrese el nombre de su equipo: " << std::endl;
             cin>> nombre;
