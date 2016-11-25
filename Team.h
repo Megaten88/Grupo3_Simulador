@@ -32,7 +32,7 @@ public:
 	int getGoal_a();
 	void setGoal_a(int);
 	void addPlayer(Player*);
-	Team(string, Coach* , int, double, int, int);
+	Team(string, int, double, int, int);
 	~Team();
 	
 };

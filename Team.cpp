@@ -5,9 +5,8 @@ Team::Team(){
 
 }
 
-Team::Team(string t_name, Coach* t_coach,int def_lvl,double atk_lvl,int goals_if,int goals_a){
+Team::Team(string t_name, int def_lvl,double atk_lvl,int goals_if,int goals_a){
 	this-> t_name = t_name;
-	this-> t_coach = t_coach;
 	this-> def_lvl = def_lvl;
 	this-> atk_lvl = atk_lvl;
 	this-> goals_if = goals_if;
