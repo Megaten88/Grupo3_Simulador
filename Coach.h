@@ -12,5 +12,5 @@ public:
 	Coach(string,string,string,int,string);
 	void setTactic(string);
 	string getTactic();
-	~Coach();	
+	~Coach();
 };
