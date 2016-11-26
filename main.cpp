@@ -132,7 +132,7 @@ int main(int argc, char const *argv[]) {
                 cin>> seleccionado;
 
                 Coach* auxiliar = entrenadores.at(seleccionado);
-
+                equipos.at(select) -> setT_coach(auxiliar);
                 entrenadores.erase(entrenadores.begin() + seleccionado);
 
 
@@ -172,6 +172,7 @@ int main(int argc, char const *argv[]) {
                 cin>>t2;
                 cin>>t3;
                 cin>>t4;
+
                 Team* team1 = equipos.at(t1);
                 Team* team2 = equipos.at(t2);
                 Team* team3 = equipos.at(t3);
@@ -203,9 +204,17 @@ int main(int argc, char const *argv[]) {
                         juegos.at(0)->setScore_2( juegos.at(0) -> getScore_2() + 1);
                     }
                 }
-                if (juegos.at(0)->setScore_1() > juegos.at(0)->setScore_2())
+                if (juegos.at(0)->getScore_1() > juegos.at(0)->getScore_2())
                 {
-                    reporte<<
+                   reporte<< "Gano el equipo: " << juegos.at(0)->getTeam_1() -> getT_Name()<<endl;
+                   reporte<< "El score es: "<<endl;
+                   reporte << juegos.at(0)->getTeam_1() -> getT_Name() <<": "<< juegos.at(0)-> getScore_1() << endl;
+                   reporte << juegos.at(0)->getTeam_2() -> getT_Name() <<": "<< juegos.at(0)-> getScore_2();
+                }else{
+                   reporte<< "Gano el equipo: " << juegos.at(0)->getTeam_2()-> getT_Name()<<endl;
+                   reporte<< "El score es: "<<endl;
+                   reporte << juegos.at(0)->getTeam_1() -> getT_Name() <<": "<< juegos.at(0)-> getScore_1() << endl;
+                   reporte << juegos.at(0)->getTeam_2() -> getT_Name() <<": "<< juegos.at(0)-> getScore_2()<<endl;
                 }
                 for (int i = 0; i < 5; ++i)
                 {
@@ -218,6 +227,18 @@ int main(int argc, char const *argv[]) {
                         juegos.at(1)->setScore_2( juegos.at(1) -> getScore_2() + 1);
                     }
                 }
+                if (juegos.at(1)->getScore_1() > juegos.at(1)->getScore_2())
+                {
+                    reporte<< "Gano el equipo: " << juegos.at(1)->getTeam_1() -> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(1)->getTeam_1() -> getT_Name() <<": "<< juegos.at(1)-> getScore_1() << endl;
+                    reporte << juegos.at(1)->getTeam_2() -> getT_Name() <<": "<< juegos.at(1)-> getScore_2();
+                }else{
+                    reporte<< "Gano el equipo: " << juegos.at(0)->getTeam_2()-> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(1)->getTeam_1() -> getT_Name() <<": "<< juegos.at(1)-> getScore_1() << endl;
+                    reporte << juegos.at(1)->getTeam_2() -> getT_Name() <<": "<< juegos.at(1)-> getScore_2()<<endl;
+                }
                 for (int i = 0; i < 5; ++i)
                 {
                     int attack = rand() % 10 + 1;
@@ -228,6 +249,18 @@ int main(int argc, char const *argv[]) {
                     }else{
                         juegos.at(2)->setScore_2( juegos.at(2) -> getScore_2() + 1);
                     }
+                }
+                if (juegos.at(2)->getScore_1() > juegos.at(2)->getScore_2())
+                {
+                    reporte<< "Gano el equipo: " << juegos.at(2)->getTeam_1() -> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(2)->getTeam_1() -> getT_Name() <<": "<< juegos.at(2)-> getScore_1() << endl;
+                    reporte << juegos.at(2)->getTeam_2() -> getT_Name() <<": "<< juegos.at(2)-> getScore_2();
+                }else{
+                    reporte<< "Gano el equipo: " << juegos.at(2)->getTeam_2()-> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(2)->getTeam_1() -> getT_Name() <<": "<< juegos.at(2)-> getScore_1() << endl;
+                    reporte << juegos.at(2)->getTeam_2() -> getT_Name() <<": "<< juegos.at(2)-> getScore_2()<<endl;
                 }
                 for (int i = 0; i < 5; ++i)
                 {
@@ -240,6 +273,19 @@ int main(int argc, char const *argv[]) {
                         juegos.at(3)->setScore_2( juegos.at(3) -> getScore_2() + 1);
                     }
                 }
+                if (juegos.at(3)->getScore_1() > juegos.at(3)->getScore_2())
+                {
+                    reporte<< "Gano el equipo: " << juegos.at(3)->getTeam_1() -> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(3)->getTeam_1() -> getT_Name() <<": "<< juegos.at(3)-> getScore_1() << endl;
+                    reporte << juegos.at(3)->getTeam_2() -> getT_Name() <<": "<< juegos.at(3)-> getScore_2()<<endl;
+                }else{
+                    reporte<< "Gano el equipo: " << juegos.at(3)->getTeam_2()-> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(3)->getTeam_1() -> getT_Name() <<": "<< juegos.at(3)-> getScore_1() << endl;
+                    reporte << juegos.at(3)->getTeam_2() -> getT_Name() <<": "<< juegos.at(3)-> getScore_2()<<endl;
+                }
+
                 for (int i = 0; i < 5; ++i)
                 {
                     int attack = rand() % 10 + 1;
@@ -250,6 +296,18 @@ int main(int argc, char const *argv[]) {
                     }else{
                         juegos.at(4)->setScore_2( juegos.at(4) -> getScore_2() + 1);
                     }
+                }
+                if (juegos.at(4)->getScore_1() > juegos.at(4)->getScore_2())
+                {
+                    reporte<< "Gano el equipo: " << juegos.at(4)->getTeam_1() -> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(4)->getTeam_1() -> getT_Name() <<": "<< juegos.at(4)-> getScore_1() << endl;
+                    reporte << juegos.at(4)->getTeam_2() -> getT_Name() <<": "<< juegos.at(4)-> getScore_2();
+                }else{
+                    reporte<< "Gano el equipo: " << juegos.at(4)->getTeam_2()-> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(4)->getTeam_1() -> getT_Name() <<": "<< juegos.at(4)-> getScore_1() << endl;
+                    reporte << juegos.at(4)->getTeam_2() -> getT_Name() <<": "<< juegos.at(4)-> getScore_2()<<endl;
                 }
                 for (int i = 0; i < 5; ++i)
                 {
@@ -262,10 +320,23 @@ int main(int argc, char const *argv[]) {
                         juegos.at(5)->setScore_2( juegos.at(5) -> getScore_2() + 1);
                     }
                 }
+                if (juegos.at(5)->getScore_1() > juegos.at(5)->getScore_2())
+                {
+                    reporte<< "Gano el equipo: " << juegos.at(5)->getTeam_1() -> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(5)->getTeam_1() -> getT_Name() <<": "<< juegos.at(5)-> getScore_1() << endl;
+                    reporte << juegos.at(5)->getTeam_2() -> getT_Name() <<": "<< juegos.at(5)-> getScore_2();
+                }else{
+                    reporte<< "Gano el equipo: " << juegos.at(5)->getTeam_2()-> getT_Name()<<endl;
+                    reporte<< "El score es: "<<endl;
+                    reporte << juegos.at(5)->getTeam_1() -> getT_Name() <<": "<< juegos.at(5)-> getScore_1() << endl;
+                    reporte << juegos.at(5)->getTeam_2() -> getT_Name() <<": "<< juegos.at(5)-> getScore_2()<<endl;
+                }
                 delete team1;
                 delete team2;
                 delete team3;
                 delete team4;
+                cout<<reporte.str();
             }else{
                 cout<<"No hay suficientes equipos para simular un torneo. "<<endl;
             }
