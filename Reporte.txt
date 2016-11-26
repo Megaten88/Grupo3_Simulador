@@ -1,0 +1,22 @@
+Gano el equipo: 1
+El score es: 
+1: 24025456
+2: 5Gano el equipo: 33
+El score es: 
+33: 24014531
+44: 2Gano el equipo: 33
+El score es: 
+1: 0
+33: 5
+Gano el equipo: 44
+El score es: 
+2: 1
+44: 4
+Gano el equipo: 44
+El score es: 
+1: 0
+44: 5
+Gano el equipo: 2
+El score es: 
+2: 24031136
+33: 5

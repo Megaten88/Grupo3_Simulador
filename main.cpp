@@ -8,7 +8,10 @@
 #include <sstream>
 #include <iostream>
 #include <stdlib.h>
+#include <fstream>
 using namespace std;
+
+void toText(stringstream);
 
 int main(int argc, char const *argv[]) {
 
@@ -18,24 +21,13 @@ int main(int argc, char const *argv[]) {
     vector<Game*> juegos;
     stringstream reporte;
 
-    for (size_t i = 0; i < 44; i++) {
-        Player* asd = new Player();
-
-        asd->setName("Casco");
-        asd->setLevel(rand() %10 +1);
-        jugadores.push_back(asd);
-        Coach* p = new Coach();
-        p->setName("Mayra");
-        p -> setLevel(rand()%10 +1);
-        entrenadores.push_back(p);
-    }
 
     //Player* asd = new Player();
     Player* asd = new Player();
 
     int opcion = 0 ;
     std::cout << "NOTA: Se generará el resumen a la hora de salir del programa :P " << std::endl;
-    while (opcion !=  8){
+    while (opcion !=  7){
         cout << "LAB# 6 :: GRUPO 3" << endl;
         cout << "1) Agregar jugadores" << endl;
         cout << "2) Agregar Coaches  " << endl;
@@ -43,7 +35,7 @@ int main(int argc, char const *argv[]) {
         cout << "4) Asignar jugadores y Entrenador " << endl;
         cout << "5) Asignar equipos a juego  " << endl;
         cout << "6) Iniciar simulación  " << endl;
-
+        cout << "7) Salir"<<endl;
         std::cin >> opcion;
 
         string nombre;
@@ -337,6 +329,10 @@ int main(int argc, char const *argv[]) {
                 delete team3;
                 delete team4;
                 cout<<reporte.str();
+                ofstream texto;
+                texto.open("Reporte.txt");
+                texto << reporte.str();
+                texto.close();
             }else{
                 cout<<"No hay suficientes equipos para simular un torneo. "<<endl;
             }
