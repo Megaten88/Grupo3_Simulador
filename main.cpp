@@ -33,9 +33,8 @@ int main(int argc, char const *argv[]) {
         cout << "2) Agregar Coaches  " << endl;
         cout << "3) Agregar Equipos  " << endl;
         cout << "4) Asignar jugadores y Entrenador " << endl;
-        cout << "5) Asignar equipos a juego  " << endl;
-        cout << "6) Iniciar simulación  " << endl;
-        cout << "7) Salir"<<endl;
+        cout << "5) Iniciar simulación  " << endl;
+        cout << "6) Salir"<<endl;
         std::cin >> opcion;
 
         string nombre;
