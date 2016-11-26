@@ -65,7 +65,9 @@ Game::Game(Team* team_1, Team* team_2, int score_1, int score_2, Team* winner,Te
 Game::Game(Team* team_1, Team* team_2){
 	this->team_1 = team_1;
 	this->team_2 = team_2;
-	local = this->team_1;
+	this->local = this->team_1;
+	this->score_1 = 0;
+	this->score_2 = 0;
 }
 
 Game::~Game(){
